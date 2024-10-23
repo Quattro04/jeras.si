@@ -14,8 +14,21 @@
   }
 }
 
+*, html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-item.active .nav-indicator {
+  width: 4rem;
+  background: #e2e8f0;
+}
+
+.nav-item.active .nav-text {
+  color: #e2e8f0;
 }
