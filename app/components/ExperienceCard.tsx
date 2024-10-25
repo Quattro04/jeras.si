@@ -24,7 +24,7 @@ export const ExperienceCard = ({ title, description, url, timeline, technologies
         <p className="text-sm">{description}</p>
         <ul className="flex gap-2 mt-3 -ml-1 flex-wrap">
           {technologies && technologies.map(technology => (
-            <li className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+            <li className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300" key={technology}>
               <span>{technology}</span>
             </li>
           ))}

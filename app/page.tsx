@@ -5,22 +5,22 @@ import { Navigation } from "./components/Navigation";
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center h-screen gap-16 font-[family-name:var(--font-geist-sans)] bg-slate-900 overflow-auto">
-      <div className="flex flex-col flex-1 lg:h-full lg:sticky lg:top-0 lg:py-24">
+    <main className="flex flex-col md:flex-row items-center md:justify-center h-screen py-12 px-4 md:p-0 md:gap-6 xl:gap-12 font-[family-name:var(--font-geist-sans)] bg-slate-900 overflow-auto">
+      <div className="flex flex-col flex-1 w-full md:h-full md:sticky md:top-0 md:py-24 px-5">
         <div className="flex justify-end w-full h-full">
-          <div className="flex flex-col items-start w-full max-w-lg">
+          <div className="flex flex-col items-start w-full md:max-w-lg">
             <h1 className="text-4xl font-bold text-slate-200 mb-2 tracking-wide">Matija Jeras</h1>
-            <h2 className="text-xl text-slate-200 mb-6 tracking-wide">Senior Frontend Developer</h2>
+            <h2 className="text-xl text-slate-200 mb-4 tracking-wide">Senior Frontend Developer</h2>
             <p className="text-md text-slate-400 max-w-96">With the power of Next.js, my passion is to build eye-pleasing and responsive web applications that offer the best user experience.</p>
             <Navigation />
           </div>
         </div>
-        <footer className="flex justify-end items-end w-full h-full">
+        <footer className="sticky md:static top-0 flex md:justify-end md:items-end w-full h-full mt-4">
           <Socials />
         </footer>
       </div>
-      <div className="row-span-2 w-full h-full flex-1">
-        <div className="flex flex-col max-w-lg pb-20">
+      <div className="row-span-2 w-full h-full flex-1 px-5">
+        <div className="flex flex-col md:max-w-lg pb-20">
           <section id="about" className="flex flex-col gap-5 items-center sm:items-start text-slate-400 pt-24">
             <p>Hello! I am Matija, a web developer based in <Link className="text-slate-200 hover:text-teal-200" href="https://en.wikipedia.org/wiki/Slovenia" target="_blank">Slovenia</Link>, let me tell you a bit about myself.</p>
             <p>My passion for programming started when I was a kid and got bigger throughout my attendance of <Link className="text-slate-200 hover:text-teal-200" href="https://fri.uni-lj.si/" target="_blank">Faculty of Computer and Information Science</Link> from 2013 to 2017.</p>

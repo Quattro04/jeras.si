@@ -9,7 +9,7 @@ export const Navigation = () => {
   const activeSection = useActiveSection();
 
   return (
-    <ul className="flex flex-col mt-24">
+    <ul className="hidden flex-col mt-24 md:flex">
       {navItems.map(item => (
         <li className={`group nav-item flex ${activeSection === item ? 'active' : ''}`} key={item}>
           <Link href={`#${item}`} className="flex items-center py-4 pr-3">
