@@ -5,23 +5,28 @@ import { Navigation } from "./components/Navigation";
 
 export default function Home() {
   return (
-    <main className="flex flex-col md:flex-row items-center md:justify-center h-screen py-12 px-4 md:p-0 md:gap-6 xl:gap-12 font-[family-name:var(--font-geist-sans)] bg-slate-900 overflow-auto">
+    <main className="flex flex-col md:flex-row items-center md:justify-center h-screen py-12 md:p-0 md:gap-6 xl:gap-12 font-[family-name:var(--font-geist-sans)] bg-slate-900 overflow-auto overflow-x-hidden">
       <div className="flex flex-col flex-1 w-full md:h-full md:sticky md:top-0 md:py-24 px-5">
         <div className="flex justify-end w-full h-full">
-          <div className="flex flex-col items-start w-full md:max-w-lg">
+          <div className="flex flex-col items-center md:items-start w-full md:max-w-lg">
             <h1 className="text-4xl font-bold text-slate-200 mb-2 tracking-wide">Matija Jeras</h1>
             <h2 className="text-xl text-slate-200 mb-4 tracking-wide">Senior Frontend Developer</h2>
-            <p className="text-md text-slate-400 max-w-96">With the power of Next.js, my passion is to build eye-pleasing and responsive web applications that offer the best user experience.</p>
+            <p className="text-md text-slate-400 max-w-96 text-center md:text-left">With the power of Next.js, my passion is to build eye-pleasing and responsive web applications that offer the best user experience.</p>
             <Navigation />
           </div>
         </div>
-        <footer className="sticky md:static top-0 flex md:justify-end md:items-end w-full h-full mt-4">
+        <footer className="hidden md:flex justify-end tems-end w-full h-full mt-4">
           <Socials />
         </footer>
       </div>
-      <div className="row-span-2 w-full h-full flex-1 px-5">
-        <div className="flex flex-col md:max-w-lg pb-20">
-          <section id="about" className="flex flex-col gap-5 items-center sm:items-start text-slate-400 pt-24">
+      <div className="row-span-2 flex flex-col w-full md:h-full flex-1 px-5">
+        <footer className="md:hidden sticky z-50 -top-9 right-0 transition-all flex justify-center mt-8">
+          <Socials />
+        </footer>
+        <div className="relative flex flex-col md:max-w-lg md:pb-20">
+          <img className="absolute w-20 md:w-32 -top-8 right-0 md:right-auto md:top-24 md:-translate-x-full lg:-translate-x-[150%]" src="/face1.png" />
+          <section id="about" className="flex flex-col gap-5 items-center sm:items-start text-slate-400 pt-12 md:pt-24">
+            <div className="sticky md:hidden w-screen z-40 font-bold -top-14 uppercase text-slate-200 px-4 pt-6 pb-4 -mx-4 backdrop-blur">about</div>
             <p>Hello! I am Matija, a web developer based in <Link className="text-slate-200 hover:text-teal-200" href="https://en.wikipedia.org/wiki/Slovenia" target="_blank">Slovenia</Link>, let me tell you a bit about myself.</p>
             <p>My passion for programming started when I was a kid and got bigger throughout my attendance of <Link className="text-slate-200 hover:text-teal-200" href="https://fri.uni-lj.si/" target="_blank">Faculty of Computer and Information Science</Link> from 2013 to 2017.</p>
             <p>After I graduated and received a bachelor's degree in computer and information science, I focused on gaining experience in the web development field, especially frontend. To create something with code and have it be accessible to all the people in the world is something that has always fascinated me.</p>
@@ -29,7 +34,8 @@ export default function Home() {
             <p>A few years passed and my experience and knowledge of <Link className="text-slate-200 hover:text-teal-200" href="https://angular.dev/" target="_blank">Angular</Link> and frontend frameworks kept growing. Then I got the opportunity to join a small team of developers within a large company, that strived to completely recreate a frontend solution for <Link className="text-slate-200 hover:text-teal-200" href="https://en.wikipedia.org/wiki/Content_management_system" target="_blank">CMS</Link> in relation to gaming and gambling - something I was familiar with from before. And what's even better - the framework used will be <Link className="text-slate-200 hover:text-teal-200" href="https://nextjs.org/" target="_blank">Next.js</Link>.</p>
             <p>I've known about <Link className="text-slate-200 hover:text-teal-200" href="https://nextjs.org/" target="_blank">Next.js</Link> and <Link className="text-slate-200 hover:text-teal-200" href="https://react.dev/" target="_blank">React</Link> by then of course, but didn't yet work with it on such a big project. And building it from scratch with latest greatest technologies is something every developer wants. So here I am currently, still working and maintaining this app while leading a small team - we'll see what the future brings.</p>
           </section>
-          <section id="experience" className="flex flex-col gap-5 items-center sm:items-start text-slate-400 pt-24">
+          <section id="experience" className="flex flex-col gap-5 items-center sm:items-start text-slate-400 pt-12 md:pt-24">
+            <div className="sticky md:hidden w-screen z-40 font-bold -top-14 uppercase text-slate-200 px-4 pt-6 pb-4 -mx-4 backdrop-blur">experience</div>
             <ExperienceCard
               title="Senior Frontend Developer — Bragg"
               description="Built a Next.js app from scratch to render CMS content and integrate data from an external WebSocket. Focused on modular libraries that work both together and independently. Explored Next.js (SSR, routing, prefetching, client/server components) and React (custom hooks, contexts, testing library). Developed a custom form system with tailored validation and state management."
@@ -59,8 +65,8 @@ export default function Home() {
               technologies={['Vue.js', 'HTML', 'CSS', 'PHP', 'Laravel']}
             />
           </section>
-          <section id="info" className="flex justify-end pt-24">
-            <p className="text-sm text-slate-600 max-w-sm">Coded in <Link className="text-slate-400 hover:text-teal-200" href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</Link> by myself. Built with <Link className="text-slate-400 hover:text-teal-200" href="https://nextjs.org/" target="_blank">Next.js</Link> and <Link className="text-slate-400 hover:text-teal-200" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</Link>, deployed with <Link className="text-slate-400 hover:text-teal-200" href="https://vercel.com/" target="_blank">Vercel</Link>.</p>
+          <section id="info" className="flex md:justify-end pt-8 md:pt-24">
+            <p className="text-sm text-slate-600 md:max-w-sm">Coded in <Link className="text-slate-400 hover:text-teal-200" href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</Link> by myself. Built with <Link className="text-slate-400 hover:text-teal-200" href="https://nextjs.org/" target="_blank">Next.js</Link> and <Link className="text-slate-400 hover:text-teal-200" href="https://tailwindcss.com/" target="_blank">Tailwind CSS</Link>, deployed with <Link className="text-slate-400 hover:text-teal-200" href="https://vercel.com/" target="_blank">Vercel</Link>.</p>
           </section>
         </div>
       </div>

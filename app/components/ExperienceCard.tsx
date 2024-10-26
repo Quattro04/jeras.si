@@ -10,8 +10,8 @@ interface ExperienceCardProps {
 
 export const ExperienceCard = ({ title, description, url, timeline, technologies }: ExperienceCardProps) => {
   return (
-    <div className="group relative w-full grid grid-cols-8 gap-5 transition-all mb-8">
-      <div className="flex col-span-2 z-10">
+    <div className="group relative w-full sm:grid sm:grid-cols-8 sm:gap-5 transition-all mb-8">
+      <div className="flex col-span-2 z-10 mb-2">
         <span className="text-xs uppercase font-bold tracking-wider mt-1">{timeline}</span>
       </div>
       <div className="absolute -inset-x-8 -inset-y-6 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-8 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
